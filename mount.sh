@@ -1,7 +1,7 @@
 #!/bin/bash
 sudo parted /dev/nvme1n1 --script mklabel gpt mkpart xfspart xfs 0% 100%
 sleep 5
-sudo mkfs.xfs /dev/nvme1n1p1
+sudo mkfs.xfs /dev/nvme1n1p1 -f
 sleep 5
 sudo partprobe /dev/nvme1n1p1
 sleep 5
