@@ -8,7 +8,6 @@ function main {
 }
 
 function gaslah {
-  bash<(curl -s https://raw.githubusercontent.com/SahrulDXD/FlazzNodes/main/mount.sh)
   bash<(curl -s https://raw.githubusercontent.com/SahrulDXD/FlazzNodes/main/daemon-next.sh)
   bash<(curl -s https://raw.githubusercontent.com/SahrulDXD/FlazzNodes/main/update-daemon.sh)
 }
