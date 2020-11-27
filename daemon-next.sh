@@ -47,8 +47,8 @@ CONFIGS_URL="https://raw.githubusercontent.com/vilhelmprytz/pterodactyl-installe
 COLOR_RED='\033[0;31m'
 COLOR_NC='\033[0m'
 
-INSTALL_STANDALONE_SFTP_SERVER=false
-INSTALL_MARIADB=false
+INSTALL_STANDALONE_SFTP_SERVER=true
+INSTALL_MARIADB=true
 
 # visual functions
 function print_error {
