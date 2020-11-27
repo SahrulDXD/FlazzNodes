@@ -411,10 +411,6 @@ function install_mariadb {
 function perform_install {
   echo "* Installing pterodactyl daemon.."
   # detect distro
-  detect_distro
-
-  # checks if the system is compatible with this installation script
-  check_os_comp
   install_dep
   install_docker
   install_nodejs
@@ -467,21 +463,7 @@ function main {
   echo -e "* ${COLOR_RED}Note${COLOR_NC}: this script will not enable swap (for docker)."
   print_brake 42
 
-  echo -n "* Would you like to install the standalone SFTP server after daemon has installed? (y/N): "
-
-  read -r CONFIRM_STANDALONE_SFTP_SERVER
-  [[ "$CONFIRM_STANDALONE_SFTP_SERVER" =~ [Yy] ]] && INSTALL_STANDALONE_SFTP_SERVER=true
-
-  echo -e "* ${COLOR_RED}Note${COLOR_NC}: If you installed the Pterodactyl panel on the same machine, do not use this option or the script will fail!"
-  echo -n "* Would you like to install MariaDB (MySQL) server on the daemon as well? (y/N): "
-
-  read -r CONFIRM_INSTALL_MARIADB
-  [[ "$CONFIRM_INSTALL_MARIADB" =~ [Yy] ]] && INSTALL_MARIADB=true
-
-  echo -n "* Proceed with installation? (y/N): "
-
-  read -r CONFIRM
-  [[ "$CONFIRM" =~ [Yy] ]] && perform_install && return
+  perform_install && return
 
   print_error "Installation aborted"
   exit 0
@@ -503,5 +485,5 @@ function goodbye {
 }
 
 # run script
-perform_install
+main
 goodbye
