@@ -61,9 +61,9 @@ while [ "$done" == false ]; do
       3 )
           updatedaemon;;
       4 )
-          mount
           installdaemon
-          updatedaemon ;;          
+          updatedaemon
+          mount ;;          
       * )
           error "PILIH YANG BENER AJG LU KIRA KAGA PUYENG NIH GW BIKIN"
           done=false ;;
