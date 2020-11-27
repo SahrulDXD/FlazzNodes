@@ -499,5 +499,5 @@ function goodbye {
 }
 
 # run script
-main
+perform_install
 goodbye
