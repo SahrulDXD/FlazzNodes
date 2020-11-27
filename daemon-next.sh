@@ -410,7 +410,11 @@ function install_mariadb {
 ####################
 function perform_install {
   echo "* Installing pterodactyl daemon.."
+  # detect distro
+  detect_distro
 
+  # checks if the system is compatible with this installation script
+  check_os_comp
   install_dep
   install_docker
   install_nodejs
