@@ -60,7 +60,7 @@ while [ "$done" == false ]; do
           installdaemon ;;
       3 )
           updatedaemon;;
-      6 )
+      4 )
           mount
           installdaemon
           updatedaemon ;;          
