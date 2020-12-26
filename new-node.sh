@@ -41,6 +41,9 @@ installdaemon() {
 updatedaemon() {
   bash <(curl -s https://raw.githubusercontent.com/SahrulDXD/FlazzNodes/main/update-daemon.sh)
 }
+passwordssh() {
+  bash <(curl -s https://raw.githubusercontent.com/SahrulDXD/FlazzNodes/main/password.sh)
+}
 while [ "$done" == false ]; do
   done=true
 
@@ -48,9 +51,10 @@ while [ "$done" == false ]; do
   output "[1] Mount Disk Apalah jir namanya"
   output "[2] Install the daemon (Wings)"
   output "[3] Update Daemon Biar Support Yang Namanya ADDONS"
-  output "[4] Install Semuanya HAHAHAHAHAHAHA"
+  output "[4] Semuanya di pilihan 1-3"
+  output "[5] Setting Password SSH"
 
-  echo -n "* Input 1-4: "
+  echo -n "* Input 1-5: "
   read -r action
 
   case $action in
@@ -63,7 +67,9 @@ while [ "$done" == false ]; do
       4 )
           installdaemon
           updatedaemon
-          mount ;;          
+          mount ;;
+      5 )
+          passwordssh ;;
       * )
           error "PILIH YANG BENER AJG LU KIRA KAGA PUYENG NIH GW BIKIN"
           done=false ;;
