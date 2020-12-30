@@ -32,7 +32,7 @@ done=false
 output
 
 butgg() {
-  curl -o butgg.bash https://raw.githubusercontent.com/mbrother2/backuptogoogle/master/butgg.bash
+  curl -o butgg.bash https://raw.githubusercontent.com/SahrulDXD/backuptogoogle/master/butgg.bash
   bash butgg.bash --setup
 }
 mount() {
