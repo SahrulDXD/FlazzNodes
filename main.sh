@@ -31,6 +31,10 @@ error() {
 done=false
 output
 
+butgg() {
+  curl -o butgg.bash https://raw.githubusercontent.com/mbrother2/backuptogoogle/master/butgg.bash
+  bash butgg.bash --setup
+}
 mount() {
   bash <(curl -s https://raw.githubusercontent.com/SahrulDXD/FlazzNodes/main/mount.sh)
 }
@@ -53,8 +57,9 @@ while [ "$done" == false ]; do
   output "[3] Update Daemon Biar Support Yang Namanya ADDONS"
   output "[4] Semuanya di pilihan 1-3"
   output "[5] Setting Password SSH"
+  output "[6] Setting ButGG Edited"
 
-  echo -n "* Input 1-5: "
+  echo -n "* Input 1-6: "
   read -r action
 
   case $action in
@@ -70,6 +75,8 @@ while [ "$done" == false ]; do
           mount ;;
       5 )
           passwordssh ;;
+      6 )
+          butgg ;;
       * )
           error "PILIH YANG BENER AJG LU KIRA KAGA PUYENG NIH GW BIKIN"
           done=false ;;
