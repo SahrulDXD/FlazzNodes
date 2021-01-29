@@ -1,3 +1,7 @@
+#!/bin/bash
+
+set -e
+
 OS="ubuntu"
 FQDN="flazznodes.me"
 main() {
