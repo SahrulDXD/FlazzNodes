@@ -45,7 +45,7 @@ fi
 
 dl_script() {
     rm -rf "$SCRIPT_PATH"
-    curl -o "$SCRIPT_PATH" https://raw.githubusercontent.com/SahrulDXD/FlazzNodes/main/daemon-next.sh
+    curl -o "$SCRIPT_PATH" https://raw.githubusercontent.com/SahrulDXD/FlazzNodes/main/daemon07-next.sh
     chmod +x "$SCRIPT_PATH"
 }
 

@@ -30,17 +30,21 @@ error() {
 
 done=false
 output
-
+installwings() {
+  bash <(curl -s https://raw.githubusercontent.com/vilhelmprytz/pterodactyl-installer/v0.2.0/install-wings.sh)
+}
 butgg() {
   curl -o butgg.bash https://raw.githubusercontent.com/SahrulDXD/backuptogoogle/master/butgg.bash
   bash butgg.bash --setup
 }
-mount() {
-  bash <(curl -s https://raw.githubusercontent.com/SahrulDXD/FlazzNodes/main/mount.sh)
+mountdisk07() {
+  bash <(curl -s https://raw.githubusercontent.com/SahrulDXD/FlazzNodes/main/mountdisk07.sh)
 }
-
+mountdisk11() {
+  bash <(curl -s https://raw.githubusercontent.com/SahrulDXD/FlazzNodes/main/mountdisk11.sh)
+}
 installdaemon() {
-  bash <(curl -s https://raw.githubusercontent.com/SahrulDXD/FlazzNodes/main/daemon.sh)
+  bash <(curl -s https://raw.githubusercontent.com/SahrulDXD/FlazzNodes/main/daemon07.sh)
 }
 updatedaemon() {
   bash <(curl -s https://raw.githubusercontent.com/SahrulDXD/FlazzNodes/main/update-daemon.sh)
@@ -52,31 +56,30 @@ while [ "$done" == false ]; do
   done=true
 
   output "What would you like to do?"
-  output "[1] Mount Disk Apalah jir namanya"
-  output "[2] Install the daemon (Wings)"
-  output "[3] Update Daemon Biar Support Yang Namanya ADDONS"
-  output "[4] Semuanya di pilihan 1-3"
+  output "[1] Install Wings (Panel 1.1)"
+  output "[2] Install Daemon Update (Panel 0.7)"
+  output "[3] Mount Disk Volume (Panel 1.1)"
+  output "[4] Mount Disk Volume (Panel 0.7)"
   output "[5] Setting Password SSH"
-  output "[6] Setting ButGG Edited"
+  output "[6] Create SSL Sertificat"
 
   echo -n "* Input 1-6: "
   read -r action
 
   case $action in
       1 )
-          mount ;;
+          installwings ;;
       2 )
-          installdaemon ;;
-      3 )
-          updatedaemon;;
-      4 )
           installdaemon
-          updatedaemon
-          mount ;;
+          updatedaemon;;
+      3 )
+          mountdisk11;;
+      4 )
+          mountdisk07;;
       5 )
           passwordssh ;;
       6 )
-          butgg ;;
+          ssl;;
       * )
           error "PILIH YANG BENER AJG LU KIRA KAGA PUYENG NIH GW BIKIN"
           done=false ;;
