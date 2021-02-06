@@ -5,7 +5,7 @@ sudo mkfs.xfs /dev/nvme1n1p1
 sleep 5
 sudo partprobe /dev/nvme1n1p1
 sleep 5
-sudo mount /dev/nvme1n1p1 /srv/daemon-data
+sudo mount /dev/nvme1n1p1 /var/lib/pterodactyl/volumes
 sleep 5
 UUID_MOUNT=$(blkid /dev/nvme1n1p1 -s UUID -o value);
-echo "UUID=${UUID_MOUNT}   /srv/daemon-data   xfs   defaults,nofail   1   2" >> /etc/fstab
+echo "UUID=${UUID_MOUNT}   /var/lib/pterodactyl/volumes   xfs   defaults,nofail   1   2" >> /etc/fstab
