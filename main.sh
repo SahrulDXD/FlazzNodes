@@ -62,6 +62,7 @@ while [ "$done" == false ]; do
   output "[4] Mount Disk Volume (Panel 0.7)"
   output "[5] Setting Password SSH"
   output "[6] Create SSL Sertificat"
+  output "[7] ButGG Panel 0.7"
 
   echo -n "* Input 1-6: "
   read -r action
@@ -80,6 +81,8 @@ while [ "$done" == false ]; do
           passwordssh ;;
       6 )
           ssl;;
+      7 )
+          butgg;;
       * )
           error "PILIH YANG BENER AJG LU KIRA KAGA PUYENG NIH GW BIKIN"
           done=false ;;
