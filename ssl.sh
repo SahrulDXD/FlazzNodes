@@ -6,7 +6,8 @@ OS="ubuntu"
 FQDN="flazznodes.me"
 main() {
   FAILED=false
-  
+  echo -n "* Set the FQDN to use for Let's Encrypt (node.example.com): "
+  read -r FQDN
 
   # Install certbot
   case "$OS" in
