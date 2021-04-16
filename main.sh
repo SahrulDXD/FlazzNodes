@@ -31,26 +31,22 @@ error() {
 done=false
 output
 installwings() {
-  bash <(curl -s https://raw.githubusercontent.com/vilhelmprytz/pterodactyl-installer/v0.2.0/install-wings.sh)
-}
-butgg() {
-  curl -o butgg.bash https://raw.githubusercontent.com/SahrulDXD/backuptogoogle/master/butgg.bash
-  bash butgg.bash --setup
+  bash <(curl -s https://raw.githubusercontent.com/vilhelmprytz/pterodactyl-installer/v0.4.0/install-wings.sh)
 }
 mountdisk07() {
-  bash <(curl -s https://raw.githubusercontent.com/SahrulDXD/FlazzNodes/main/mountdisk07.sh)
+  bash <(curl -s https://raw.githubusercontent.com/SahrulDXD/LeyzStore/main/mountdisk07.sh)
 }
 mountdisk11() {
-  bash <(curl -s https://raw.githubusercontent.com/SahrulDXD/FlazzNodes/main/mountdisk11.sh)
+  bash <(curl -s https://raw.githubusercontent.com/SahrulDXD/LeyzStore/main/mountdisk11.sh)
 }
 installdaemon() {
-  bash <(curl -s https://raw.githubusercontent.com/SahrulDXD/FlazzNodes/main/daemon07.sh)
+  bash <(curl -s https://raw.githubusercontent.com/SahrulDXD/LeyzStore/main/daemon07.sh)
 }
 updatedaemon() {
-  bash <(curl -s https://raw.githubusercontent.com/SahrulDXD/FlazzNodes/main/update-daemon.sh)
+  bash <(curl -s https://raw.githubusercontent.com/SahrulDXD/LeyzStore/main/update-daemon.sh)
 }
 passwordssh() {
-  bash <(curl -s https://raw.githubusercontent.com/SahrulDXD/FlazzNodes/main/password.sh)
+  bash <(curl -s https://raw.githubusercontent.com/SahrulDXD/LeyzStore/main/password.sh)
 }
 while [ "$done" == false ]; do
   done=true
@@ -62,7 +58,6 @@ while [ "$done" == false ]; do
   output "[4] Mount Disk Volume (Panel 0.7)"
   output "[5] Setting Password SSH"
   output "[6] Create SSL Sertificat"
-  output "[7] ButGG Panel 0.7"
 
   echo -n "* Input 1-6: "
   read -r action
@@ -81,8 +76,6 @@ while [ "$done" == false ]; do
           passwordssh ;;
       6 )
           ssl;;
-      7 )
-          butgg;;
       * )
           error "PILIH YANG BENER AJG LU KIRA KAGA PUYENG NIH GW BIKIN"
           done=false ;;
