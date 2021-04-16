@@ -1,1 +1,1 @@
-# FlazzNodes
+# LeyzStore
